@@ -1,0 +1,714 @@
+<!-- 6826f00832309f5ec6d5287a0effbbbb1a910a4daee075c51293a85a3b24b4e0|1667316031 --><!-- 876849f011ffbcf790578bffbe518f94f1e01cb69d676f7d753d8effa0ec05c3|1667316021 --><!-- 0397b559f64367212af36894a8b4ca4611859ae9d3385d502ad6b107ffcd066e|1667480155 --><!-- 3d62e27d4cf3a133a4538f6011e001ab5a74a92a3020c4097ead51766553b4fe|1667586433 --><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"05d81ee1c4",applicationID:"255322732"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <title>TIME for Kids  | Fantastic Forests</title>
+  <!-- OneTrust Cookies Consent Notice start for timeforkids.com -->
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" data-domain-script="f38b90f5-9280-47c2-8495-ac6bf7d7dd64" ></script>
+  <script type="text/javascript">
+  function OptanonWrapper() { }
+  </script>
+  <!-- OneTrust Cookies Consent Notice end for timeforkids.com -->
+
+      <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-97981691-23', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MQDGCQ3');</script>
+    <!-- End Google Tag Manager -->
+  
+  <meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//apis.google.com' />
+<link rel='dns-prefetch' href='//players.brightcove.net' />
+<link rel='dns-prefetch' href='//cdn.jwplayer.com' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='stylesheet' id='all-css-0' href='https://www.timeforkids.com/_static/??-eJyNjEsOwjAMRC9EaiH1t0GcJXIMDcROFZtWvT3ZUHVXdjOa9wbW2WEWIzGwiZgU7PGGENUAVWEhCbk0NV7gBMXMnOUv1BeLmMjplNddiILpEyr6UmAK0VOqZn04ljn5jYpL9PS4NRzlXK/bsf+kO9+ufT90Y9uO3RcRUmGW' type='text/css' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='all-css-2' href='https://www.timeforkids.com/wp-content/themes/tfk/style.css?m=1667315921g' type='text/css' media='all' />
+<script src='https://apis.google.com/js/platform.js?ver=5.9.5' id='google-platform-js'></script>
+<link rel="canonical" href="https://www.timeforkids.com/k1/fantastic-forests/" />
+<link rel="alternate" type="application/json+oembed" href="https://www.timeforkids.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.timeforkids.com%2Fk1%2Ffantastic-forests%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.timeforkids.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.timeforkids.com%2Fk1%2Ffantastic-forests%2F&#038;format=xml" />
+<style>img#wpstats{display:none}</style>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Fantastic Forests" />
+<meta property="og:url" content="https://www.timeforkids.com/k1/fantastic-forests/" />
+<meta property="og:description" content="Forests are made of trees. Let&#039;s look at three types of forests. Temperate Forest Temperate forests are found all over the world. These forests have four seasons. They are hot or cool at different times of the year. Animals adapt…" />
+<meta property="article:published_time" content="2019-10-04T15:00:35+00:00" />
+<meta property="article:modified_time" content="2021-05-07T15:08:29+00:00" />
+<meta property="og:site_name" content="Time for Kids" />
+<meta property="og:image" content="https://www.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="720" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="Fantastic Forests" />
+<meta name="twitter:image" content="https://www.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Forests are made of trees. Let&#039;s look at three types of forests. Temperate Forest Temperate forests are found all over the world. These forests have four seasons. They are hot or cool at different times of the year. Animals adapt…" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://www.timeforkids.com/wp-content/uploads/2021/06/cropped-RosieFavicon.png?w=32" sizes="32x32" />
+<link rel="icon" href="https://www.timeforkids.com/wp-content/uploads/2021/06/cropped-RosieFavicon.png?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.timeforkids.com/wp-content/uploads/2021/06/cropped-RosieFavicon.png?w=180" />
+<meta name="msapplication-TileImage" content="https://www.timeforkids.com/wp-content/uploads/2021/06/cropped-RosieFavicon.png?w=270" />
+
+  
+  	    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <script>
+      window.siteData = {
+        editions: [],
+        rest_url: 'https://www.timeforkids.com/wp-json/',
+        user_age: 'none',
+        user_role: 'none',
+      };
+    </script>
+  
+	<meta name="author" content="">
+			<script async src="https://api.readalong.ai/readalong/C547C88E-1DC0-44A4-A681-C2EFF40E10E2"></script>
+	</head>
+
+<body class="tfk_article-template-default single single-tfk_article postid-53253">
+  <a href="#main-content" class="skip-to-main-content">Skip to main content</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+      <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQDGCQ3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  
+  <div id="site">
+        <!-- 3dd686f000f5bed71112e5d2c753dc6a43dd6701bd9ba4a0cdd26b73d8e16336|1667316021 -->
+<div class="c-header c-header--articles-page">
+	<header class="row dont-print tfk-main">
+		<div class="column small-12">
+			<div class="row menu-wrap">
+				<div>
+											<div class="hamburger c-header__hamburger active"></div>
+
+						<div class="close_btn c-header__close_btn "></div>
+					
+					<div class="c-header__logo">
+						<a class="" href="https://www.timeforkids.com?u=">
+							<img src="https://www.timeforkids.com/wp-content/themes/tfk/build/assets/images/site-logo.png?v=1.5.1" alt="TIME for Kids."/>
+						</a>
+					</div>
+
+					<div class="c-header__login">
+																								</div>
+
+					
+											<div class="c-header__search">
+							<a href="https://www.timeforkids.com/k1/">Search</a>
+						</div>
+									</div>
+			</div>
+		</div>
+
+		<div class="row dont-print">
+			<div class="submenu menu-container c-header__menu-container ">
+				<div class="small-12 window window-menu hidden">
+					<div class="menu-content">
+						<!-- d688f337e1f1b79d381600d23a2f5f8dc9f06aa524cd3a3317f4ae9d1a3f3658|1667316021 --><ul class="c-header__floating-menu">
+								<li tabindex="0" aria-expanded="false" class="top-level articles-grade has-children">
+				<span class="wrap">Articles by Grade level</span>
+				<div class="submenu-background"></div>
+				<ul>
+					<li><a href="https://www.timeforkids.com/k1/">Grades K-1 Articles</a></li>
+					<li><a href="https://www.timeforkids.com/g2/">Grade 2 Articles</a></li>
+					<li><a href="https://www.timeforkids.com/g34/">Grades 3-4 Articles</a></li>
+					<li><a href="https://www.timeforkids.com/g56/">Grades 5-6 Articles</a></li>
+				</ul>
+			</li>
+			<li tabindex="0" aria-expanded="false" class="top-level topics has-children">
+				<span class="wrap">Topics</span>
+				<div class="submenu-background"></div>
+				<ul>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/animals/">Animals</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/arts/">Arts</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/books/">Books</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/business/">Business</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/community/">Community</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/culture/">Culture</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/debate/">Debate</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/earth-science/">Earth Science</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/engineering/">Engineering</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/environment/">Environment</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/food-and-nutrition/">Food and Nutrition</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/government/">Government</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/history/">History</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/holidays/">Holidays</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/inventions/">Inventions</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/movies-and-television/">Movies and Television</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/music-and-theater/">Music and Theater</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/people/">People</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/places/">Places</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/science/">Science</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/space/">Space</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/sports/">Sports</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/the-human-body/">The Human Body</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/the-view/">The View</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/transportation/">Transportation</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/weather/">Weather</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/world/">World</a>
+						</li>
+											<li tabindex="0">
+							<a href="https://www.timeforkids.com/k1/topics/young-game-changers/">Young Game Changers</a>
+						</li>
+									</ul>
+			</li>
+			<li tabindex="0" aria-expanded="false" class="top-level your-money has-children">
+				<span class="wrap">Your $ Financial Literacy Content</span>
+				<div class="submenu-background"></div>
+				<ul>
+					<li><a href="https://www.timeforkids.com/partner/pwc/g4/">Grade 4 Edition</a></li>
+					<li><a href="https://www.timeforkids.com/partner/pwc/g56/">Grade 5-6 Edition</a></li>
+				</ul>
+			</li>
+			<li tabindex="0" aria-expanded="false" class="top-level">
+				<a class="c-header__age-gate-link age-gate" href="https://www.timeforkids.com/?age-gate=1">For Grown-ups</a>
+			</li>
+					
+									<li tabindex="0" class="top-level divider">
+					<a href="https://www.timeforkids.com/login/">Log In</a>
+				</li>
+						
+	<li class="top-level  hidden ">
+		<span class="wrap inactive">role: none</span>
+	</li>
+
+	<li class="top-level  hidden ">
+		<span class="wrap inactive">user_age: none</span>
+	</li>
+
+	<li class="top-level  hidden ">
+		<span class="wrap inactive">editions: </span>
+	</li>
+</ul>
+					</div>
+				</div>
+
+				<div class="small-12 window window-search hidden">
+					<div class="menu-content">
+						<!-- 0f52fc04fba8194f6b83b0ccad9e97a135111f6a821d6cecd86d7ddfd9f3a4f4|1667316021 --><form action="https://www.timeforkids.com/k1/" class="search">
+	<input type="text" name="text" placeholder="Search for articles"/>
+
+	<input type="submit" value="Press enter to search"/>
+</form>
+					</div>
+				</div>
+
+				<div class="small-12 window window-age-gate hidden">
+					<div class="menu-content">
+						<!-- 6d16462dc19bcb9b0ff1f2fbf678afc26847fe51a9dbb83cde1b51e3248d1a95|1667586433 -->	<div class="c-header__age-gate">
+		<div class="gate-container">
+			<div>
+				<a href="https://www.timeforkids.com?u=">
+					<img src="https://www.timeforkids.com/wp-content/themes/tfk/build/assets/images/site-logo.png?v=1.5.1" class="c-header__logo" alt="TIME for Kids."/>
+				</a>
+
+									<p class="font-size-20">
+						The page you are about to enter is for grown-ups.<br/>
+						Enter your birth date to continue.
+					</p>
+
+					<form method="post">
+						<fieldset>
+							<legend>Month <span>(MM)</span></legend>
+							<select name="age_gate[month]"><option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option></select>						</fieldset>
+
+						<fieldset>
+							<legend for="">Year <span>(YYYY)</span></legend>
+							<select name="age_gate[year]"><option >1922</option><option >1923</option><option >1924</option><option >1925</option><option >1926</option><option >1927</option><option >1928</option><option >1929</option><option >1930</option><option >1931</option><option >1932</option><option >1933</option><option >1934</option><option >1935</option><option >1936</option><option >1937</option><option >1938</option><option >1939</option><option >1940</option><option >1941</option><option >1942</option><option >1943</option><option >1944</option><option >1945</option><option >1946</option><option >1947</option><option >1948</option><option >1949</option><option >1950</option><option >1951</option><option >1952</option><option >1953</option><option >1954</option><option >1955</option><option >1956</option><option >1957</option><option >1958</option><option >1959</option><option >1960</option><option >1961</option><option >1962</option><option >1963</option><option >1964</option><option >1965</option><option >1966</option><option >1967</option><option >1968</option><option >1969</option><option >1970</option><option >1971</option><option >1972</option><option >1973</option><option >1974</option><option >1975</option><option >1976</option><option >1977</option><option >1978</option><option >1979</option><option >1980</option><option >1981</option><option >1982</option><option >1983</option><option >1984</option><option >1985</option><option >1986</option><option >1987</option><option >1988</option><option >1989</option><option >1990</option><option >1991</option><option >1992</option><option >1993</option><option >1994</option><option >1995</option><option >1996</option><option >1997</option><option >1998</option><option >1999</option><option >2000</option><option >2001</option><option >2002</option><option >2003</option><option >2004</option><option >2005</option><option >2006</option><option >2007</option><option >2008</option><option >2009</option><option >2010</option><option >2011</option><option >2012</option><option >2013</option><option >2014</option><option >2015</option><option >2016</option><option >2017</option><option >2018</option><option >2019</option><option >2020</option><option >2021</option><option  selected='selected'>2022</option></select>						</fieldset>
+
+						<div>
+							<button class="btn btn--md" type="submit">Submit</button>
+						</div>
+					</form>
+							</div>
+
+			<div class="perspective"></div>
+		</div>
+	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</div>
+    <main>
+      <a id="main-content"></a>
+            
+	<div class="site-container--full">
+		<div class="article-show">
+			<div class="article-show__wrapper">
+				<div class="article-show__conatiner">
+					<div class="article-show__header">
+													<div class="article-show__content-audio-player audio-player hidden">
+								<div>
+									<audio src="https://www.timeforkids.com/wp-content/uploads/2019/09/k1-earth-science.mp3" controls></audio>
+									<a href="#" class="close" title="Close">&times;</a>
+								</div>
+							</div>
+						
+													<ul class="article-show__content-sections">
+																	<li>
+										<a href="https://www.timeforkids.com/k1/sections/environment/">Environment</a>
+									</li>
+								
+																	<li>
+										<a href="https://www.timeforkids.com/k1/topics/earth-science/">Earth Science</a>
+									</li>
+															</ul>
+						
+						<h1 class="article-show__content-title">Fantastic Forests</h1>
+
+						<div class="article-show__content-meta">
+							<h3 class="article-show__content-date">October 4, 2019</h3>
+														
+													</div>
+
+						
+						
+						
+												
+					</div>
+
+					<div class="article-show__availabilities dont-print">
+						<ul class="availabilities">
+																						<li class="article-show__availabilities-audio dont-print">
+									<a class="audio" href="#">Read Aloud</a>
+								</li>
+																															<li class="article-show__availabilities-language-es dont-print">
+										<a class="language" href="https://www.timeforkids.com/k1/fantastic-forests/?lang=es">En Espanol</a>
+									</li>
+															
+							<li class="article-show__availabilities-print dont-print">
+								<button>Print</button>
+							</li>
+						</ul>
+					</div>
+
+					<div class="article-show__content">
+						<div class="article-show__body">
+
+															<figure class="header_img">
+									<img src="https://www.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg?w=1024" alt="" height="720" width="1024"/>
+									<figcaption>
+										<span class="caption"></span>
+										<span class="credit">PETER ZELEI IMAGES/GETTY IMAGES</span>
+									</figcaption>
+								</figure>
+							
+							<div class="article-show__content-article">
+								<p>Forests are made of trees. Let's look at three types of forests.</p>
+<h2>Temperate Forest</h2>
+<div class="image"><img src="https://www.timeforkids.com/wp-content/uploads/2019/09/temperate-forest.jpg?w=1024" width="1024" height="687" alt=""/></div><cite>DAVID H. CARRIERE—GETTY IMAGES</cite>
+<p>Temperate forests are found all over the world. These forests have four seasons. They are hot or cool at different times of the year. Animals <span class="powerword" tabindex="0">adapt<span class="definition" aria-modal="true">
+                                <span class="top">
+                                    <audio src="https://www.timeforkids.com/wp-content/uploads/2019/04/pw-adapt.mp3" controls></audio>
+                                    <button class="close" title="close">&times;</button>
+                                </span>
+                                
+								<span class="bottom">
+									<span class="title">adapt</span>
+                                    <img src="https://www.timeforkids.com/wp-content/uploads/2019/04/GettyImages-980877428.jpg?w=1024" alt=""/>
+                                    <span class="credit">AMAR PIXLER/GETTY IMAGES</span>
+                                    <span class="def">
+										to change or adjust
+										<span class="speech">(verb)</span>
+                                    </span>
+                                    <span class="usage">At the zoo, there is an exhibit where you can see a chameleon adapt to different surroundings by changing colors.</span>
+                                </span>
+                            </span></span> to the changing weather. Many types of trees grow in a temperate forest. Their leaves change color with the seasons. Leaves fall off the trees when the weather gets cool. As the weather warms up, the trees grow new leaves. </p>
+<h2>Boreal Forest </h2>
+<div class="image"><img src="https://www.timeforkids.com/wp-content/uploads/2019/09/boreal.jpg?w=1024" width="1024" height="679" alt=""/></div><cite>LONGTAILDOG—GETTY IMAGES</cite>
+<p>Boreal forests are found in northern parts of the world. These forests are cold. Spruce and pine trees grow in boreal forests. They have leaves shaped like needles. The largest boreal forest is in Russia. It is called a <span class="powerword" tabindex="0">taiga<span class="definition" aria-modal="true">
+                                <span class="top">
+                                    <audio src="https://www.timeforkids.com/wp-content/uploads/2019/09/pw-taiga.mp3" controls></audio>
+                                    <button class="close" title="close">&times;</button>
+                                </span>
+                                
+								<span class="bottom">
+									<span class="title">taiga</span>
+                                    <img src="https://www.timeforkids.com/wp-content/uploads/2019/09/GettyImages-1154243132.jpg?w=509" alt=""/>
+                                    <span class="credit">MICHAEL SEMENOV—500PX/GETTY IMAGES</span>
+                                    <span class="def">
+										a type of forest that is located near the Arctic Circle.  
+										<span class="speech">(noun)</span>
+                                    </span>
+                                    <span class="usage">Wolves live in the taiga. </span>
+                                </span>
+                            </span></span>. It is home to many animals. Moose, wolves, and caribou live in boreal forests. The animals have adapted to the cold climate by growing thick fur.</p>
+<h2>Tropical Rain Forest</h2>
+<div class="image"><img src="https://www.timeforkids.com/wp-content/uploads/2019/09/TROPICAL-RAIN-FOREST.jpg?w=1024" width="1024" height="683" alt=""/></div><cite>GREGORY MD—GETTY IMAGES</cite>
+<p>You may have guessed that it rains a lot in a rain forest. You are right! Tropical rain forests are hot and <span class="powerword" tabindex="0">damp<span class="definition" aria-modal="true">
+                                <span class="top">
+                                    <audio src="https://www.timeforkids.com/wp-content/uploads/2019/09/pw-damp.mp3" controls></audio>
+                                    <button class="close" title="close">&times;</button>
+                                </span>
+                                
+								<span class="bottom">
+									<span class="title">damp</span>
+                                    <img src="https://www.timeforkids.com/wp-content/uploads/2019/09/GettyImages-74854863.jpg?w=509" alt=""/>
+                                    <span class="credit">DON MASON—GETTY IMAGES</span>
+                                    <span class="def">
+										slightly wet
+										<span class="speech">(adjective)</span>
+                                    </span>
+                                    <span class="usage">Her hair is still damp from her bath. </span>
+                                </span>
+                            </span></span>. They are home to more types of plants and animals than any other habitat. The biggest rain forest is the Amazon. It is in South America. There, you’ll find monkeys, frogs, toucans, jaguars, and other animals.</p>
+<h3><em>Did You Know?</em></h3>
+<div class="image"><img src="https://www.timeforkids.com/wp-content/uploads/2019/09/didyouknow.jpg?w=1024" width="1024" height="682" alt=""/></div><cite>TAHREER PHOTOGRAPHY/GETTY IMAGES</cite>
+<p>Trees give us oxygen. They help clean the air. Chopping down too many trees hurts the environment. </p>
+							</div>
+
+																								<div class="component video-jw" data-video-id="0JuhL93v" data-media-id="0JuhL93v">
+										<div class="video-container" id="jw-video-id-0JuhL93v"></div>
+									</div>
+								
+													</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="site-container">
+		<div>
+			
+			
+							<div class="article-show__related-articles dont-print">
+											<h3 class="list-header">More from Environment</h3>
+										<div class="articles k1">
+													<!-- 0ec032ecf9493e0abf24202b8542db0e7a3b5bb53144248ff9d15777cd8439ff|1667316021 --><div class="c-article-preview ">
+	<div class="c-article-preview__image">
+		
+					<a href="https://www.timeforkids.com/k1/grow-your-own-garden-3/" tabindex="-1">
+				<div class="c-article-preview__image-container">
+					<img src="https://www.timeforkids.com/wp-content/uploads/2022/02/EarthEat5.jpg?w=1024" alt=""/>
+				</div>
+			</a>
+			</div>
+
+	<div class="c-article-preview__wrapper">
+		<div class="c-article-preview__content">
+							<h3 class="c-article-preview__section">
+											<a href="https://www.timeforkids.com/k1/topics/food-and-nutrition/">Food and Nutrition</a>
+									</h3>
+			
+			<h2 class="c-article-preview__title">
+				<a href="https://www.timeforkids.com/k1/grow-your-own-garden-3/">Grow Your Own Garden</a>
+			</h2>
+
+			<div class="c-article-preview__date">
+				March 10, 2022
+
+				
+			</div>
+
+			<p class="c-article-preview__text">
+				<a href="https://www.timeforkids.com/k1/grow-your-own-garden-3/" tabindex="-1">Starting a garden might seem hard. TFK Kid Reporter Ian McKenna has some tips. They will get you growing in no time. • Decide what to grow. Grow vegetables. If you don’t like vegetables, try fruits or flowers. There are…</a>
+			</p>
+			<div class="c-article-preview__availability">
+									<div class="c-article-preview__icon c-article-preview--audio">
+						<div class="c-article-preview__icon-image"></div>
+						<div class="c-article-preview__icon-text">Audio</div>
+					</div>
+								
+				
+				
+							</div>
+		</div>
+	</div>
+
+</div>
+													<div class="c-article-preview ">
+	<div class="c-article-preview__image">
+		
+					<a href="https://www.timeforkids.com/k1/eat-for-earth/" tabindex="-1">
+				<div class="c-article-preview__image-container">
+					<img src="https://www.timeforkids.com/wp-content/uploads/2022/02/EarthEat7.jpg?w=1024" alt=""/>
+				</div>
+			</a>
+			</div>
+
+	<div class="c-article-preview__wrapper">
+		<div class="c-article-preview__content">
+							<h3 class="c-article-preview__section">
+											<a href="https://www.timeforkids.com/k1/topics/food-and-nutrition/">Food and Nutrition</a>
+									</h3>
+			
+			<h2 class="c-article-preview__title">
+				<a href="https://www.timeforkids.com/k1/eat-for-earth/">Eat for the Earth</a>
+			</h2>
+
+			<div class="c-article-preview__date">
+				March 10, 2022
+
+				
+			</div>
+
+			<p class="c-article-preview__text">
+				<a href="https://www.timeforkids.com/k1/eat-for-earth/" tabindex="-1">Some food choices are better for the planet than others. They use less energy and fewer resources. Here are some environmentally friendly food tips. Shop Locally  Shipping food a long way uses energy. Farmers’ markets sell food that was…</a>
+			</p>
+			<div class="c-article-preview__availability">
+									<div class="c-article-preview__icon c-article-preview--audio">
+						<div class="c-article-preview__icon-image"></div>
+						<div class="c-article-preview__icon-text">Audio</div>
+					</div>
+								
+				
+									<div class="c-article-preview__icon c-article-preview--language-es">
+						<div class="c-article-preview__icon-image"></div>
+						<div class="c-article-preview__icon-text">Spanish</div>
+					</div>
+				
+							</div>
+		</div>
+	</div>
+
+</div>
+													<div class="c-article-preview ">
+	<div class="c-article-preview__image">
+		
+					<a href="https://www.timeforkids.com/k1/seeing-spring/" tabindex="-1">
+				<div class="c-article-preview__image-container">
+					<img src="https://www.timeforkids.com/wp-content/uploads/2022/01/011222_CMS_Spring_1.jpg?w=1024" alt=""/>
+				</div>
+			</a>
+			</div>
+
+	<div class="c-article-preview__wrapper">
+		<div class="c-article-preview__content">
+							<h3 class="c-article-preview__section">
+											<a href="https://www.timeforkids.com/k1/topics/the-human-body/">The Human Body</a>
+									</h3>
+			
+			<h2 class="c-article-preview__title">
+				<a href="https://www.timeforkids.com/k1/seeing-spring/">Seeing Spring</a>
+			</h2>
+
+			<div class="c-article-preview__date">
+				February 11, 2022
+
+				
+			</div>
+
+			<p class="c-article-preview__text">
+				<a href="https://www.timeforkids.com/k1/seeing-spring/" tabindex="-1">When winter ends, spring begins. The weather gets warmer. Plants and animals return. See how we use our senses to experience the season. Seeing  Look! You can see lots of birds in the spring. Baby animals are born. Bears…</a>
+			</p>
+			<div class="c-article-preview__availability">
+									<div class="c-article-preview__icon c-article-preview--audio">
+						<div class="c-article-preview__icon-image"></div>
+						<div class="c-article-preview__icon-text">Audio</div>
+					</div>
+								
+				
+									<div class="c-article-preview__icon c-article-preview--language-es">
+						<div class="c-article-preview__icon-image"></div>
+						<div class="c-article-preview__icon-text">Spanish</div>
+					</div>
+				
+							</div>
+		</div>
+	</div>
+
+</div>
+													<div class="c-article-preview ">
+	<div class="c-article-preview__image">
+		
+					<a href="https://www.timeforkids.com/k1/water-cycle/" tabindex="-1">
+				<div class="c-article-preview__image-container">
+					<img src="https://www.timeforkids.com/wp-content/uploads/2021/11/k1-water-cycle.jpg?w=1024" alt=""/>
+				</div>
+			</a>
+			</div>
+
+	<div class="c-article-preview__wrapper">
+		<div class="c-article-preview__content">
+							<h3 class="c-article-preview__section">
+											<a href="https://www.timeforkids.com/k1/topics/weather/">Weather</a>
+									</h3>
+			
+			<h2 class="c-article-preview__title">
+				<a href="https://www.timeforkids.com/k1/water-cycle/">The Water Cycle</a>
+			</h2>
+
+			<div class="c-article-preview__date">
+				December 1, 2021
+
+				
+			</div>
+
+			<p class="c-article-preview__text">
+				<a href="https://www.timeforkids.com/k1/water-cycle/" tabindex="-1">Water is always on the move. This movement is called the water cycle. Around It Goes Water is all around us. It is underground. It is on the Earth’s surface. It is in the air. Water changes as it moves…</a>
+			</p>
+			<div class="c-article-preview__availability">
+									<div class="c-article-preview__icon c-article-preview--audio">
+						<div class="c-article-preview__icon-image"></div>
+						<div class="c-article-preview__icon-text">Audio</div>
+					</div>
+								
+				
+				
+							</div>
+		</div>
+	</div>
+
+</div>
+											</div>
+				</div>
+					</div>
+	</div>
+
+	<!-- d759c6d2692907f6387d1b9e5639b806b771e91905c3adc31b1e49f8cf03733b|1667316021 -->
+<div class="share-container">
+	<div class="share-container__wrapper">
+				<div class="share-container__content">
+												<div class="share-container__col">
+						<div class="share-container__col-image share-container__col-image-link  share_link" id="copy-link"></div>
+						<h2>Share a Link</h2>
+						<ol>
+							<li>Click the icon above to copy the url link to your clipboard.</li>
+							<li>Paste the link into the location in which you share assignments with students. Examples might include, but are not limited to Canvas, Schoology and Edmodo.
+							<br/> <br/> <div class="lms_row">
+							<div class="lms_col"><img src="https://www.timeforkids.com/wp-content/themes/tfk/src/assets/images/lms_logos/canvas-logo.png" alt="Canvas" height="70px" width="70px"></div>
+							<div class="lms_col"><img src="https://www.timeforkids.com/wp-content/themes/tfk/src/assets/images/lms_logos/schoology-logo.png"  alt="Canvas" height="70px" width="70px"></div>
+							<div class="lms_col"><img src="https://www.timeforkids.com/wp-content/themes/tfk/src/assets/images/lms_logos/edmodo-logo.png" alt="Canvas" height="70px" width="70px"></div>
+							</div>
+							</li>
+						</ol>
+					</div>
+					<div class="share-container__col">
+						<div class="share-container__col-image share-container__col-image-classroom share_link" id="gc-copy-link">
+						</div>
+						<h2>Google Classroom</h2>
+						<ol>
+							<li>Click on the icon above to share the article with a class in your Google Classroom.</li>
+							<li>Choose an action. Options might include creating an assignment or asking a question.</li>
+						</ol>
+						<div class="googleclassroom-icon">
+							<div class="lms_col "><img src="https://www.timeforkids.com/wp-content/themes/tfk/src/assets/images/lms_logos/gc-logo.png" alt="Canvas" height="70px" width="70px"></div>
+						</div>
+					</div>
+					
+						
+		</div>
+		<a href="#" class="share-container__close" title="Close"></a>
+	</div>
+</div>
+    </main>
+            <!-- 6eb0c645ebd7bdc30ea86631f33790edff2cdd78e347c482d7e016e8cdb47757|1667316021 --><footer class="c-footer dont-print">
+	<div class="site-container">
+		<div class="standard-container">
+			<nav>
+				<ul class="c-footer__menu-items">
+					<li class="c-footer__menu-item"><a href="/contact-us/">Contact us</a></li>
+					<li class="c-footer__menu-item"><a href="/privacy-policy/">Privacy policy</a></li>
+					<li class="c-footer__menu-item"><a href="/privacy-policy/#_Toc54003735">California privacy</a></li>
+					<li class="c-footer__menu-item"><a href="/terms-of-service/">Terms of Service</a></li>
+
+																		<li class="c-footer__menu-item"><a href="/subscribe/" data-subscribe="true">Subscribe</a></li>
+																<li class="c-footer__menu-item"><a href="https://www.timeforkids.com/classroom-international">CLASSROOM INTERNATIONAL</a></li>
+					<li class="c-footer__menu-item"><a href="https://www.timeforkids.com/home-international">HOME INTERNATIONAL</a></li>
+				</ul>
+			</nav>
+
+			<img src="https://www.timeforkids.com/wp-content/themes/tfk/build/assets/images/site-logo.png?v=1.5.1" class="c-footer__logo" alt="TIME for Kids." />
+
+						
+			<div class="horizontal-rule"></div>
+			<div class="c-footer__legal">
+				<small>&copy; 2022 TIME USA, LLC. All Rights Reserved.<br /> Powered by WordPress.com VIP</small>
+			</div>
+		</div>
+	</div>
+</footer>        <script type="text/javascript" src="https://www.timeforkids.com/wp-content/themes/tfk/dist/js/article-show.js?m=1667315921g" ></script><script src='https://players.brightcove.net/1872491367001/default_default/index.min.js?ver=1.5.0' id='brightcove-player-js'></script>
+<script src='https://cdn.jwplayer.com/libraries/2AEggsO1.js?ver=1.5.0' id='tfk-jwplayer-js'></script>
+<script type="text/javascript" src="https://www.timeforkids.com/_static/??/wp-content/themes/tfk/dist/js/vendor.js,/wp-content/themes/tfk/dist/js/common.js?m=1667315921j" ></script><script src='https://stats.wp.com/e-202244.js' defer></script>
+<script>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:11.4',blog:'133471321',post:'53253',tz:'-4',srv:'www.timeforkids.com',hp:'vip'} ]);
+	_stq.push([ 'clickTrackerInit', '133471321', '53253' ]);
+</script>
+
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"05d81ee1c4","applicationID":"255322732","transactionName":"b1xWMEsEW0ZVUkVbW1YWdQdNDFpbG1hfVlFA","queueTime":0,"applicationTime":257,"atts":"QxtBRgMeSBkWUBMIT0VE","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>  
